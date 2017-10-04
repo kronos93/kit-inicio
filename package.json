@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "webpack --config ./webpack.config.dev.babel.js -d --watch --color",
     "prod": "webpack --config ./webpack.config.prod.babel.js -p --env.prod --colors",
-    "dev:d": "webpack --config ./webpack.config.babel.js -d --watch --color",
-    "prod:d": "webpack --config ./webpack.config.babel.js -p --env.prod --colors",
     "clean": "rimraf ./public/*.png ./public/*.json ./public/*.html ./public/*.xml ./public/*.ico ./public/.cache ./public/*.webapp ./public/*.js ./public/assets/*",
     "start": "webpack-dev-server --config ./webpack.config.dev.babel.js --color",
     "dash": "webpack-dashboard -c -- webpack-dev-server"
