@@ -42,7 +42,7 @@ Entre los significados podemos encontrar:
 * [mysql-inline-decorator](https://marketplace.visualstudio.com/items?itemName=odubuc.mysql-inline-decorator) - Añade resaltado a la sintaxis mysql
 
 
-#Configuración para pruebas de PWA en chrome
+# Configuración para pruebas de PWA en chrome
 
 * [Depuración remota](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/) - Guía para activar la depuración remota en chrome
 Si la depuración remota no se activa con el tutorial anterior se recomienda:
@@ -55,7 +55,7 @@ Al ejecutar el comando se espara una respuesta similar a:
 ```
 * Puede consultar información sobre [dispositivo no visible](https://stackoverflow.com/questions/29983673/cant-see-my-device-of-chrome-inspect-devices), se describe la solución al problema de un dispositivo no visible al querer usar la depuración remota
 
-#Pruebas de la configuración remota
+# Pruebas de la configuración remota
 
 Configuración recomendada para chrome en el uso de la depuración remota:
 ![Configuración recomendada para chrome](./configuracion-chrome-remote-devices.png "Demo")
