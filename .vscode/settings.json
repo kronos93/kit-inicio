@@ -1,0 +1,61 @@
+{
+  // Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
+  // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+  "files.autoSave": "off",
+  // Controls the font size in pixels.
+  "editor.fontSize": 14,
+  // Controls the font family.
+  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+  "editor.renderWhitespace": "all",
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.vscode": true,
+    "**/node_modules": true
+  },
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": true,
+  // Controls whether the minimap slider is automatically hidden. Possible values are 'always' and 'mouseover'
+  "editor.minimap.showSlider": "always",
+  // Controls if suggestions should automatically show up while typing
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  // Controls if the editor should automatically close brackets after opening them
+  "editor.autoClosingBrackets": true,
+  // Controls if the editor should automatically format the line after typing
+  "editor.formatOnType": false,
+  // Controls if the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": false,
+  // Controls if the editor should automatically adjust the indentation when users type, paste or move lines. Indentation rules of the language must be available.
+  "editor.autoIndent": true,
+  // Enable/disable default HTML formatter
+  "html.format.enable": true,
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  "editor.formatOnSave": true,
+  // Controls whether the editor should render indent guides
+  "editor.renderIndentGuides": true,
+  //Diseño
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "seti",
+  //php-cs-fixer, necesita tener instalado php-cs-fixer
+  // "php-cs-fixer.executablePath": "php-cs-fixer",
+  // "php-cs-fixer.onsave": true,
+  // "php-cs-fixer.rules": "@PSR2",
+  //"php-cs-fixer.config": ".php_cs",
+  // "php-cs-fixer.autoFixByBracket": true,
+  // "php-cs-fixer.autoFixBySemicolon": false,
+  // "php-cs-fixer.formatHtml": true
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "phpformatter.composer": true,
+  "typescript.check.npmIsInstalled": false,
+  // Evitar duplicados de php
+  "php.suggest.basic": false
+}

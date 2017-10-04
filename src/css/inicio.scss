@@ -1,0 +1,16 @@
+html {
+  font: {
+    family: $font-main;
+    size: $font-size;
+  }
+  color: $font-color;
+  background-image: url('../img/demo.png');
+}
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+p {
+  font-size: 3rem;
+  text-align: center;
+}
