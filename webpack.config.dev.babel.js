@@ -56,7 +56,6 @@ export default {
     // the filename template of the source map location
   },
   module: {
-
     rules: [
       //JS and JSX - https://babeljs.io/docs/setup/#installation
       {
