@@ -58,7 +58,7 @@ Al ejecutar el comando se espara una respuesta similar a:
 #Pruebas de la configuración remota
 
 Configuración recomendada para chrome en el uso de la depuración remota:
-![Configuración recomendada para chrome](./configuración-chrome-remote-devices.png "Demo")
+![Configuración recomendada para chrome](./configuracion-chrome-remote-devices.png "Demo")
 
 Demo en chrome - vista smathphone:
 ![Demo en chrome](./demo-chrome.png "Demo")
