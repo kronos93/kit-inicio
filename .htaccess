@@ -6,11 +6,12 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 </IfModule>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Rewrite user URLs
 #   Input:  mensaje/NAME/
 #   Output: mensaje.php?id=NAME
-RewriteRule ^public/mensaje/(\w+)/?$ public/mensaje.html?id=$1
+RewriteRule ^public/mensaje/((\w+)/?) public/mensaje.html?id=$1
 </IfModule>
 #https://code.tutsplus.com/tutorials/an-in-depth-guide-to-mod_rewrite-for-apache--net-6708

@@ -16,3 +16,4 @@ hola(); hola(); hola();
 if (module.hot) {
   module.hot.accept();
 }
+console.log('BANKAIIIIIIIIII!');
