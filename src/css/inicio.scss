@@ -4,7 +4,7 @@ html {
     size: $font-size;
   }
   color: $font-color;
-  background-image: url('../img/demo.png');
+  background: linear-gradient(-45deg, $second-color, $first-color, $second-color) no-repeat fixed;
 }
 h1 {
   font-size: 4rem;

@@ -6,6 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import PurifyCSSPlugin from "purifycss-webpack";
+import BabiliPlugin from 'babili-webpack-plugin';
 import glob from 'glob-all';
 import DashboardPlugin from 'webpack-dashboard/plugin';
 const srcDir = resolve(__dirname, './src');
@@ -230,6 +231,7 @@ export default {
       template: './index.html',
       minify: false, // { collapseWhitespace: true, removeComments: true }
     }),
+    new BabiliPlugin(),
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
   ],
   stats: "errors-only",
