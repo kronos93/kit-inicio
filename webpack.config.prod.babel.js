@@ -9,6 +9,9 @@ import PurifyCSSPlugin from "purifycss-webpack";
 import BabiliPlugin from 'babili-webpack-plugin';
 import glob from 'glob-all';
 import DashboardPlugin from 'webpack-dashboard/plugin';
+import AlterThemeColorPluginInHtmlWebpackPlugin from './build/plugins/AlterThemeColorPluginInHtmlWebpackPlugin';
+let background = '#367F9B';  //Color to background in an install app
+let theme_color = '#367F9B'; //Color to top bar
 const srcDir = resolve(__dirname, './src');
 const publicDir = resolve(__dirname, './public');
 const publicDirAssets = resolve(__dirname, './public/assets');
@@ -51,7 +54,7 @@ export default {
     path: publicDir, // string
     // the target directory for all output files
     // must be an absolute path (use the Node.js path module)
-    publicPath: "./", // string
+    publicPath: "/", // string
     // the url to the output directory resolved relative to the HTML page
     filename: 'assets/js/[name].js', // for multiple entry points
     // the filename template for entry chunks
@@ -166,12 +169,12 @@ export default {
         developerURL: "https://github.com/kronos93",             // Your (or your developer's) URL. `string`
         appleStatusBarStyle: 'black-translucent',
         lang: 'en-MX',
-        background: "#FFF",             // Background colour for flattened icons. `string`
-        theme_color: "#F4BA2C",            // Theme color for browser chrome. `string`
+        background: background,             // Background colour for flattened icons. `string`, in meta is theme_color :(
+        theme_color: theme_color,             // Theme color for browser chrome. `string`
         path: "./",                      // Path for overriding default icons path. `string`
         display: "standalone",          // Android display: "browser" or "standalone". `string`
         orientation: "portrait",        // Android orientation: "portrait" or "landscape". `string`
-        start_url: "./?utm_source=homescreen",    // Android start application's URL. `string`
+        start_url: "/?utm_source=homescreen",    // Android start application's URL. `string`
         version: "1.0",                 // Your application's version number. `number`
         logging: false,                 // Print logs to console? `boolean`
         online: false,                  // Use RealFaviconGenerator to create favicons? `boolean`

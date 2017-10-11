@@ -4,9 +4,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import FaviconsWebpackPluginCesco from 'favicons-webpack-plugin-cesco';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import DashboardPlugin from 'webpack-dashboard/plugin';
+import AlterThemeColorPluginInHtmlWebpackPlugin from './build/plugins/AlterThemeColorPluginInHtmlWebpackPlugin';
 const srcDir = resolve(__dirname, './src');
 const publicDir = resolve(__dirname, './public');
 const publicDirAssets = resolve(__dirname, './public/assets');
+let background = '#367F9B';  //Color to background in an install app
+let theme_color = '#367F9B'; //Color to top bar
 const pathsToClean = [
   '.cache',
   '*.xml',
@@ -48,7 +51,7 @@ export default {
     path: publicDir, // string
     // the target directory for all output files
     // must be an absolute path (use the Node.js path module)
-    publicPath: "./", // string
+    publicPath: "/", // string
     // the url to the output directory resolved relative to the HTML page
     filename: 'assets/js/[name].js', // for multiple entry points
     // the filename template for entry chunks
@@ -175,12 +178,12 @@ export default {
         developerURL: "https://github.com/kronos93",             // Your (or your developer's) URL. `string`
         appleStatusBarStyle: 'black-translucent',
         lang: 'en-MX',
-        background: "#FFF",             // Background colour for flattened icons. `string`
-        theme_color: "#F4BA2C",            // Theme color for browser chrome. `string`
+        background: background,             // Background colour for flattened icons. `string`, in meta is theme_color :(
+        theme_color: theme_color,            // Theme color for browser chrome. `string`
         path: "./",                      // Path for overriding default icons path. `string`
         display: "standalone",          // Android display: "browser" or "standalone". `string`
         orientation: "portrait",        // Android orientation: "portrait" or "landscape". `string`
-        start_url: "./?utm_source=homescreen",    // Android start application's URL. `string`
+        start_url: "/?utm_source=homescreen",    // Android start application's URL. `string`
         version: "1.0",                 // Your application's version number. `number`
         logging: false,                 // Print logs to console? `boolean`
         online: false,                  // Use RealFaviconGenerator to create favicons? `boolean`
@@ -226,6 +229,12 @@ export default {
     // prints more readable module names in the browser console on HMR updates
     new webpack.NoEmitOnErrorsPlugin(),
     // do not emit compiled assets that include errors
+    //Plugins personalizados :D
+    new AlterThemeColorPluginInHtmlWebpackPlugin({
+      background: background,
+      theme_color: theme_color
+    }),
+
   ],
   //https://webpack.js.org/configuration/dev-server/
   devServer: {
