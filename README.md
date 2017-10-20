@@ -98,3 +98,11 @@ Revisar el uso de `file-loader` con `url-loader` testeando los mismos tipos de a
 [Video speed controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk) - Acelerador de velocidad de reproducción para videos
 [Lightouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) -Validador de PWA
 
+Globals packages
+
+
+npm install -g dotenv-extended
+npm install -g webpack
+npm install -g webpack-dev-server
+npm install -g npm
+npm install -g webpack-dashboard
