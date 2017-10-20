@@ -54,7 +54,7 @@ export default {
     path: publicDir, // string
     // the target directory for all output files
     // must be an absolute path (use the Node.js path module)
-    publicPath: "/", // string
+    publicPath: "/kit-inicio/public/", // string
     // the url to the output directory resolved relative to the HTML page
     filename: 'assets/js/[name].js', // for multiple entry points
     // the filename template for entry chunks
