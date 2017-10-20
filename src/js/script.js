@@ -1,4 +1,5 @@
 import '../css/styles.scss';
+let logoDevex = require('../img/icon.png');
 console.clear();
 class Persona {
   saludo() {
@@ -16,3 +17,6 @@ hola(); hola(); hola();
 if (module.hot) {
   module.hot.accept();
 }
+
+let app = document.getElementById('app');
+app.innerHTML = `<img src="${logoDevex}" alt="Logo devex"/>`;
