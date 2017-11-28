@@ -9,7 +9,7 @@ AlterThemeColorPluginInHtmlWebpackPlugin.prototype.apply = function (compiler) {
   var background = this.background;
   compiler.plugin('compilation', function (compilation) {
     //c('El compilador esta iniciando una nueva compilación');
-    compilation.plugin('html-webpack-plugin-before-html-processing', function (htmlPluginData, callback) {
+    compilation.plugin('html-webpack-plugin-after-html-processing', function (htmlPluginData, callback) {
       htmlPluginData.html = htmlPluginData.html.replace(/\/\.\//g, '/').replace(`<meta name="theme-color" content="${background}">`, `<meta name="theme-color" content="${theme_color}">`);
       callback(null, htmlPluginData);
     });
